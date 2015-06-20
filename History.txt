@@ -1,0 +1,62 @@
+20.02.2015 (v1.4)
+- Autocompletion popup didn't opened when cursor caret was at the very last position in document
+- Fixed "Unknown exception" when starting Notepad++ if PHP Class Inspector docking window wasn't opened at least once
+- Fixed "Unknown exception" when deactivating plugin through settings dialog if PHP Class Inspector docking window wasn't opened at least once
+- Added experimental support for "var" keyword for class attributes
+- Timeout for autocomletion search while typing can be set in the settings (from 0.5 sec up to 3 sec)
+- Updated email address and added third party code authors in about dialog
+- Updated internal code to XE 7
+- Small text corrections
+
+16.04.2014 (v1.3)
+- Class constants and static attributes / methods can now be accessed by the "::" operator and are not visible in the popup for "->" operator anymore
+- When parsing large directories takes too much time (> 5 sec.), a popup will be shown with the message "Please wait..." and a progress bar to indicate the process status
+- New optional docking window which shows all available classes and their properties. Double click on attributes and methods opens the corresponsing file and jumps to the declaration. Also a search function included.
+- Toolbar Button for PHP class inspector added
+- Autocompletion popup can now be closed with the BACK and DELETE keys too
+- Entries in autocompletion popup are shown with colored icons at left side instead with #, +, -
+- Message handling in background optimized
+- Small optimization in GetCurrentPHPClass()
+- Bugfix: Comments, strings and non PHP data are removed prior calling GetCurrentPHPClass() now too
+- Bugfix: Crash in UTF8UnicodePos() under some conditions
+- Bugfix: Autocompletion starts only if full operator entered (previously it was triggered by char '>' but popup then didn't showed up)
+- Bugfix: Classes which are temporarily defined in Notepad++ but not saved in a file are not saved in the internal structure on shutdown anymore and are removed on each parsing too
+- Bugfix: Parsed files are loaded with correct encoding now
+- Some code cleanup
+
+08.03.2014 (v1.2.3)
+- Parameters with type casts in methods are not showed with "$" in popup anymore
+- Attributes and methods of following right-to-left languages are displayed as right-to-left: Arabic, Hebrew
+- Under certain conditions the autocompletion popup didn't showed up
+- Support for unicode characters insertion from popup
+- Files in PHP root directory will be re-scanned when it is changed (previously this happened only when clicking the "..." button)
+- Code improvements
+- Code cleanup
+
+28.02.2014 (v1.2.2)
+- Parsing performance dramatically increased
+- Fixed memory leak in ListFiles()
+- Checksum DB of parsed files is now saved and loaded (increases performance)
+- All windows can be closed with ESC key
+
+27.02.2014 (v1.2.1)
+- Opened ACCPC windows do not disappear anymore when user switches to another window
+- Added option to disable autocompletion
+- Fixed problem with shrinking autocompletion popup
+
+26.02.2014 (v1.2)
+- New setting: Type casts of method parameters can be shown/hidden in completion popup (see settings)
+- Non-PHP data is stripped now (fixes many errors and exceptions)
+- Fixed problem with brackets in class names (i.a. infinite loop)
+- Fixed display error caused by empty spaces in optional parameters
+- Interfaces (currently not supported) do not cause access violation errors anymore
+- Classes which implements (currently not supported) interfaces do not cause access violation errors anymore
+
+05.12.2013 (v1.1)
+- Ported to Delphi
+- Added selection dialog for root directory
+- Works now with Release-Build of NPP
+- Bugfixes
+
+01.04.2013 (v1.0.1)
+- Initial release

@@ -1,0 +1,210 @@
+http://php.net/manual/en/reserved.classes.php
+
+== "Core" ==
+stdClass
+__PHP_Incomplete_Class
+Directory
+Exception
+ErrorException
+php_user_filter
+Closure
+
+== FANN (Fast Artificial Neural Network) ==
+FANNConnection
+
+== JSON ==
+JsonSerializeable
+
+== Judy ==
+Judy
+
+== Lua ==
+Lua
+LuaClosure
+
+== Standard PHP Library (SPL) ==
+Datastructures:
+	SplDoublyLinkedList
+	SplStack
+	SplQueue
+	SplHeap
+	SplMaxHeap
+	SplMinHeap
+	SplPriorityQueue
+	SplFixedArray
+	SplObjectStorage
+Iterators:
+	AppendIterator
+	ArrayIterator
+	CachingIterator
+	CallbackFilterIterator
+	DirectoryIterator
+	EmptyIterator
+	FilesystemIterator
+	FilterIterator
+	GlobIterator
+	InfiniteIterator
+	IteratorIterator
+	LimitIterator
+	MultipleIterator
+	NoRewindIterator
+	ParentIterator
+	RecursiveArrayIterator
+	RecursiveCachingIterator
+	RecursiveCallbackFilterIterator
+	RecursiveDirectoryIterator
+	RecursiveFilterIterator
+	RecursiveIteratorIterator
+	RecursiveRegexIterator
+	RecursiveTreeIterator
+	RegexIterator
+Interfaces:
+	Countable
+	OuterIterator
+	RecursiveIterator
+	SeekableIterator
+	SplObserver
+	SplSubject
+Exceptions:
+	BadFunctionCallException
+	BadMethodCallException
+	DomainException
+	InvalidArgumentException
+	LengthException
+	LogicException
+	OutOfBoundsException
+	OutOfRangeException
+	OverflowException
+	RangeException
+	RuntimeException
+	UnderflowException
+	UnexpectedValueException
+File Handling:
+	SplFileInfo
+	SplFileObject
+	SplTempFileObject
+Miscellaneous Classes and Interfaces:
+	ArrayObject
+	SplObserver
+	SplSubject
+
+== SPL Types ==
+SplType
+SplInt
+SplFloat
+SplEnum
+SplBool
+SplString
+
+== Streams ==
+php_user_filter
+streamWrapper
+
+== Tidy ==
+tidy
+tidyNode
+
+== V8 Javascript Engine Integration (V8js) ==
+V8Js
+V8JsException
+
+== Yet Another Framework (Yaf) ==
+Yaf_Application
+Yaf_Bootstrap_Abstract
+Yaf_Dispatcher
+Yaf_Config_Abstract
+Yaf_Config_Ini
+Yaf_Config_Simple
+Yaf_Controller_Abstract
+Yaf_Action_Abstract
+Yaf_View_Interface
+Yaf_View_Simple
+Yaf_Loader
+Yaf_Plugin_Abstract
+Yaf_Registry
+Yaf_Request_Abstract
+Yaf_Request_Http
+Yaf_Request_Simple
+Yaf_Response_Abstract
+Yaf_Route_Interface
+Yaf_Route_Map
+Yaf_Route_Regex
+Yaf_Route_Rewrite
+Yaf_Router
+Yaf_Route_Simple
+Yaf_Route_Static
+Yaf_Route_Supervar
+Yaf_Session
+Yaf_Exception
+Yaf_Exception_TypeError
+Yaf_Exception_StartupError
+Yaf_Exception_DispatchFailed
+Yaf_Exception_RouterFailed
+Yaf_Exception_LoadFailed
+Yaf_Exception_LoadFailed_Module
+Yaf_Exception_LoadFailed_Controller
+Yaf_Exception_LoadFailed_Action
+Yaf_Exception_LoadFailed_View
+
+== MySQLi ==
+mysqli
+mysqli_stmt
+mysqli_result
+mysqli_driver
+mysqli_warning
+mysqli_sql_exception
+
+== Reflection API ==
+ReflectionException
+Reflection
+ReflectionFunction
+ReflectionParameter
+ReflectionMethod
+ReflectionClass
+ReflectionObject
+ReflectionProperty
+ReflectionExtension
+
+== SQLLite ==
+SQLiteDatabase
+SQLiteResult
+SQLiteUnbuffered
+SQLiteException
+
+== SimpleXML ==
+SimpleXMLElement
+SimpleXMLIterator
+
+== DOM/XSL/XPath extensions ==
+DOMException
+DOMStringList
+DOMNameList
+DOMImplementationList
+DOMImplementationSource
+DOMImplementation
+DOMNode
+DOMNameSpaceNode
+DOMDocumentFragment
+DOMDocument
+DOMNodeList
+DOMNamedNodeMap
+DOMCharacterData
+DOMAttr
+DOMElement
+DOMText
+DOMComment
+DOMTypeinfo
+DOMUserDataHandler
+DOMDomError
+DOMErrorHandler
+DOMLocator
+DOMConfiguration
+DOMCdataSection
+DOMDocumentType
+DOMNotation
+DOMEntity
+DOMEntityReference
+DOMProcessingInstruction
+DOMStringExtend
+DOMXPath
+XSLTProcessor

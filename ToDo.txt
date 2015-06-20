@@ -1,0 +1,14 @@
+- When checking for changed files while parsing, remove file entries from checksum DB which are disappeared from disk
+- Interfaces & Implements (http://www.php.net/manual/de/language.oop5.interfaces.php)
+- Multiple search pathes for PHP files
+- Check if there is a faster checksum algorithm than CRC32
+- Put plugin under some license (GNU GPL?)
+- Make a readme file
+- Think about to add support to detect string variables for class names (as of PHP 5.3.0) in GetCurrentPHPClass(). Example: $foo='myclass'; $foo->
+- Bug: When VirtualListView looses focus selected item background becomes light gray but font stays white (hard to see)
+- Bug: Add suffix "[static]" to static methods in VirtualListView (currently set as text but not drawed)
+- Bug: File offset position of attributes / methods sometimes still not correct (seems to happen on comments like /** ... */)
+- When double clicking attribute / method, after file opened and jumped to offset, perform a vertical scroll some lines down or up
+- Autocompletion for "self". Try: Backup the fileOffset of classes & use current position to find out between which classes user is to get current class. Uh.. this is a very dirty trick..
+- Bug: Overloaded parameters with round brackets prevents recognition of further parameters. Example: func($a, $b=array(), $will_not_be_recognised) {}
+- Implement keyword (and functionality) "final" for classes and methods. See: http://php.net/manual/en/language.oop5.final.php

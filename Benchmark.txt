@@ -1,0 +1,27 @@
+Benchmark - Overall parsing time
+=====================================
+For ACCPC version: 1.2.2
+
+System
+-------------------------------------
+CPU: Intel Core i7-2600K @3.40GHz (8 CPUs)
+RAM: 8192 MB
+OS: Windows 7 Home Premium 64-Bit
+HDD: 7200 RPM
+
+Notes:
+- Plugin works not in multi-thread mode.
+- No overclocking.
+- No / disabled AntiVirus
+
+Test data (PHP files only)
+-------------------------------------
+Files: 14905
+Folders: 3849
+Overall size: 301 MiB
+
+Result
+-------------------------------------
+complete (cold start): 10 sec
+complete (warm start): 10 sec
+no change (only CRC comparing): 5 sec

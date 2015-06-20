@@ -1,0 +1,57 @@
+Field type		Description
+----------------------------------------------------------------------
+UINT32			Version (corresponds with plugin version)
+[collections]
+	UINT8		Collection ID. 0=reserved, 1=classes, 2=constants, 3=checksums, 4=class linking list
+	INT32		Collection entries
+	[collection data (see below)]
+
+Collections
+----------------------------------------------------------------------
+[collection 1 (classes)]
+UINT16		Class name length
+[variable]	Class name
+UINT16		Name of derived class length
+[variable]	Name of derived class
+UINT32		Offset position in file
+INT32		Attributes count
+	[attributes]
+	UINT8		Visibility. 0=unknown, 1=public, 2=private, 3=protected
+	UINT8		Static
+	UINT8		Const
+	UINT16		Attribute name length
+	[variable]	Attribute name
+	UINT32		Offset position in file
+INT32		Methods count
+	[methods]
+	UINT8		Visibility. 0=unknown, 1=public, 2=private, 3=protected
+	UINT8		Static
+	UINT16		Method name length
+	[variable]	Method name
+	UINT32		Parameters text length
+	[variable]	Parameters text (parameters are separated through line breaks)
+	UINT32		Offset position in file
+
+[collection 2 (constants)]
+UINT16		Constant name length
+[variable]	Constant name
+UINT16		Constant value length
+[variable]	Constant value
+UINT8		Case sensitive
+
+[collection 3 (checksums)]
+UINT32		CRC32 Checksum
+UINT16		Length of path + filename
+[variable]	Path + filename
+
+[collection 4 (class linking list)]
+UINT32		Index of class in class collection
+UINT32		Connected files count
+	[connected files]
+	INT32		Index of file in checksums collection (-1 = not from file but from scintilla view)
+
+
+
+Note:
+- String lengths indicate character count but strings itself are always in UTF-16 / UCS-2 format (length * 2 bytes)
+- There are no length or offset indicators for collections, which means there is no way for older versions to skip unknown collections. If plugin and file version do not match, the file will not be loaded at all and the plugin will rebuild the structure on next scan.
