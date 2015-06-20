@@ -10,7 +10,7 @@ A popup window appears after typing the "->" or "::" behind a class or an instan
 [![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_dock_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_dock.png)
 [![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/unicode_and_right-to-left_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/unicode_and_right-to-left.png)
 
-This is a plugin for the Notepad++ text editor.
+This is a plugin for the [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) text editor.
 
 Written by Stanislav Eckert, 2013-2015<br>
 Base plugin template by Damjan Zobo Cvetko
