@@ -12,5 +12,5 @@ A popup window appears after typing the "->" or "::" behind a class or an instan
 
 This is a plugin for the Notepad++ text editor.
 
-Written by Stanislav Eckert, 2013-2014B
-ase plugin template by Damjan Zobo Cvetko
+Written by Stanislav Eckert, 2013-2015
+Base plugin template by Damjan Zobo Cvetko
