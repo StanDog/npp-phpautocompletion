@@ -1,3 +1,8 @@
+21.06.2015 (v1.4.1)
+- Updated email in about dialog
+- Moved from SourceForge to GitHub
+- Renamed internal plugin name in Notepad++ Plugin Manager from "ACCPC" to "PHP Autocompletion"
+
 20.02.2015 (v1.4)
 - Autocompletion popup didn't opened when cursor caret was at the very last position in document
 - Fixed "Unknown exception" when starting Notepad++ if PHP Class Inspector docking window wasn't opened at least once

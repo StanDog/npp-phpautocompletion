@@ -83,11 +83,12 @@
         <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_Release>1</VerInfo_Release>
         <VerInfo_MinorVer>4</VerInfo_MinorVer>
         <VerInfo_DLL>true</VerInfo_DLL>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <VerInfo_Build>0</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Stanislav Eckert;FileDescription=Auto completion for custom PHP classes (ACCPC);FileVersion=1.4.0.0;InternalName=;LegalCopyright=Stanislav Eckert;LegalTrademarks=;OriginalFilename=accpc.dll;ProductName=ACCPC;ProductVersion=1.4.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Stanislav Eckert;FileDescription=Auto completion for custom PHP classes (ACCPC);FileVersion=1.4.1.0;InternalName=;LegalCopyright=Stanislav Eckert;LegalTrademarks=;OriginalFilename=accpc.dll;ProductName=ACCPC;ProductVersion=1.4.1.0;Comments=</VerInfo_Keys>
         <Manifest_File>None</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">

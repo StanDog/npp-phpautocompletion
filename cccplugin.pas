@@ -88,13 +88,14 @@ var
 begin
   inherited;
 
-  iAppVersion := 1004000;
-  sAppVersion := '1004000';
-  sAppVersionDisplay := '1.4';
+  iAppVersion := 1004001;
+  sAppVersion := '1004001';
+  sAppVersionDisplay := '1.4.1';
 
   // Define compatible settings file versions
   settingsCompatibleVersions := System.Generics.Collections.TList<integer>.Create();
   settingsCompatibleVersions.Add(iAppVersion);
+  settingsCompatibleVersions.Add(1004000);
   settingsCompatibleVersions.Add(1003000);
   settingsCompatibleVersions.Add(1002003);
   settingsCompatibleVersions.Add(1002002);
@@ -118,7 +119,7 @@ begin
   //****************************************************************
   //**                    Setup some variables                    **
   //****************************************************************
-  self.PluginName := 'ACCPC';
+  self.PluginName := 'PHP Autocompletion';
 
   //****************************************************************
   //**                 Create menu entries in NPP                 **
@@ -1034,7 +1035,7 @@ var
   aboutForm: TAboutForm;
 begin
   aboutForm := TAboutForm.Create(self);
-  aboutForm.Label2.Caption := 'Version '+ sAppVersionDisplay +' (Win32, Unicode) for NPP';
+  aboutForm.Label2.Caption := 'Version '+ sAppVersionDisplay +' (Win32, Unicode) for Notepad++';
   aboutForm.ShowModal;
   aboutForm.Free;
 end;

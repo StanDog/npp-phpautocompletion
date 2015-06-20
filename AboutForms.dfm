@@ -23,9 +23,9 @@ inherited AboutForm: TAboutForm
   object Label2: TLabel
     Left = 24
     Top = 40
-    Width = 265
+    Width = 296
     Height = 13
-    Caption = 'Version {sAppVersionDisplay} (Win32, Unicode) for NPP'
+    Caption = 'Version {sAppVersionDisplay} (Win32, Unicode) for Notepad++'
   end
   object Label3: TLabel
     Left = 24
@@ -37,10 +37,10 @@ inherited AboutForm: TAboutForm
   object Label4: TLabel
     Left = 218
     Top = 67
-    Width = 160
+    Width = 134
     Height = 13
     Cursor = crHandPoint
-    Caption = 'stane-npp@users.sourceforge.net'
+    Caption = 'github@stanislaveckert.com'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11
