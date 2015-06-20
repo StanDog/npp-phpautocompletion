@@ -6,9 +6,9 @@ A popup window appears after typing the "->" or "::" behind a class or an instan
 
 **Screenshots**
 
-[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/accpc_popup_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/accpc_popup.png)
-[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/accpc_dock_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/accpc_dock.png)
-[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/unicode_and_right-to-left_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/unicode_and_right-to-left.png)
+[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_popup_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_popup.png)
+[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_dock_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/accpc_dock.png)
+[![Auto-completion popup](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/unicode_and_right-to-left_small.png)](https://raw.githubusercontent.com/StanDog/npp-phpautocompletion/master/RELEASES/images/unicode_and_right-to-left.png)
 
 This is a plugin for the Notepad++ text editor.
 
