@@ -21,14 +21,44 @@ class Directory
 	public rewind(resouce $dir_handle = $this) {}
 }
 
-class Exception
+class Throwable
+{
+	abstract public getMessage() {}
+	abstract public getCode() {}
+	abstract public getFile() {}
+	abstract public getLine() {}
+	abstract public getTrace() {}
+	abstract public getTraceAsString() {}
+	abstract public getPrevious() {}
+	abstract public __toString() {}
+}
+
+class Exception extends Throwable
 {
 	protected $message;
 	protected $code;
 	protected $file;
 	protected $line;
 
-	public __construct(string $message = "", int $code = 0, Exception $previous = NULL) {}
+	public __construct(string $message = "", int $code = 0, Throwable $previous = NULL) {}
+	final public getMessage() {}
+	final public getPrevious() {}
+	final public getCode() {}
+	final public getFile() {}
+	final public getLine() {}
+	final public getTrace() {}
+	final public getTraceAsString() {}
+	public __toString() {}
+	final private __clone() {}
+}
+
+class Error extends Throwable
+{
+	protected $message;
+	protected $code;
+	protected $file;
+	protected $line;
+	public __construct(string $message = "" , int $code = 0 , Throwable $previous = NULL)
 	final public getMessage() {}
 	final public getPrevious() {}
 	final public getCode() {}
@@ -118,7 +148,32 @@ class UnexpectedValueException extends RuntimeException
 {
 }
 
-// ==  ==
+// == Errors ==
+class TypeError extends Error
+{
+}
+
+class ParseError extends Error
+{
+}
+
+class AssertionError extends Error
+{
+}
+
+class ArithmeticError extends Error
+{
+}
+
+class DivisionByZeroError extends Error
+{
+}
+
+class CompileError extends Error
+{
+}
+
+// == Iterators ==
 class Traversable
 {
 }
@@ -132,18 +187,86 @@ class Iterator extends Traversable
 	abstract public valid() {}
 }
 
+
+class IteratorAggregate extends Traversable
+{
+	abstract public getIterator() {}
+}
+
+class ArrayIterator extends IteratorAggregate
+{
+	const STD_PROP_LIST = 1;
+	const ARRAY_AS_PROPS = 2;
+
+	public append(mixed $value) {}
+	public asort() {}
+	public __construct(mixed $array = array(), int $flags = 0) {}
+	public count() {}
+	public current() {}
+	public getArrayCopy() {}
+	public getFlags() {}
+	public key() {}
+	public ksort() {}
+	public natcasesort() {}
+	public natsort() {}
+	public next() {}
+	public offsetExists(mixed $index) {}
+	public offsetGet(mixed $index) {}
+	public offsetSet(mixed $index, mixed $newval) {}
+	public offsetUnset(mixed $index) {}
+	public rewind() {}
+	public seek(int $position) {}
+	public serialize() {}
+	public setFlags(string $flags) {}
+	public uasort(callable $cmp_function) {}
+	public uksort(callable $cmp_function) {}
+	public unserialize(string $serialized) {}
+	public valid() {}
+}
+
 // Note: Generator objects cannot be instantiated via the "new" operator.
 // http://php.net/manual/en/class.generator.php
-class Generator implements Iterator
+class Generator extends Iterator
 {
 	public current() {}
+	public getReturn() {} // PHP7
 	public key() {}
 	public next() {}
 	public rewind() {}
 	public send(mixed $value) {}
-	public throw(Exception $exception) {}
+	public throw(Throwable $exception) {}
 	public valid() {}
 	public __wakeup() {}
+}
+
+// == SPL classes ==
+class ArrayObject
+{
+	const STD_PROP_LIST = 1;
+	const ARRAY_AS_PROPS = 2;
+	
+	public __construct(mixed $input = array(), int $flags = 0, string $iterator_class = "ArrayIterator") {}
+	public append(mixed $value) {}
+	public asort() {}
+	public count() {}
+	public exchangeArray(mixed $input) {}
+	public getArrayCopy() {}
+	public getFlags() {}
+	public getIterator() {}
+	public getIteratorClass() {}
+	public ksort() {}
+	public natcasesort() {}
+	public natsort() {}
+	public offsetExists(mixed $index) {}
+	public offsetGet(mixed $index) {}
+	public offsetSet(mixed $index, mixed $newval) {}
+	public offsetUnset(mixed $index) {}
+	public sserialize() {}
+	public setFlags(int $flags) {}
+	public setIteratorClass(string $iterator_class) {}
+	public uasort(callable $cmp_function) {}
+	public uksort(callable $cmp_function) {}
+	public unserialize(string $serialized) {}
 }
 
 ?>
