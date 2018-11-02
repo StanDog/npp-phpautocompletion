@@ -141,7 +141,7 @@ type
   end;
 
 const
-  keywords: array[0..10] of string = ('class', 'private', 'public', 'protected', 'const', 'static', 'function', 'include', 'include_once', 'define', 'var');
+  keywords: array[0..10] of string = ('abstract', 'class', 'private', 'public', 'protected', 'const', 'static', 'function', 'include', 'include_once', 'define', 'var');
 
 implementation
 
@@ -656,7 +656,7 @@ begin
   b1 := false;
   repeat
     sKeyword := self.getNext(false);
-    if (sKeyword = '<?php') then
+    if (sKeyword = '<?php' or sKeyword = '<?') then
     begin
       b1 := true;
     end;
@@ -684,9 +684,11 @@ begin
       end
 
       // Class name (and parent of derived class)
-      else if (sCheckKeyword = 'class') then
+      else if (sCheckKeyword = 'class' or sCheckKeyword = 'abstract') then
       begin
-
+        if (sCheckKeyword = 'abstract') then
+          sCheckKeyword := self.getNext(false); // fix for abstract class
+        end
         // Get & create PHP class
         s1 := self.getNext(false);  // Class name
 
@@ -996,6 +998,7 @@ begin
       else if
       (
         (sCheckKeyword = 'var') or
+        (sCheckKeyword = 'abstract') or
         (sCheckKeyword = 'public') or
         (sCheckKeyword = 'private') or
         (sCheckKeyword = 'protected')
@@ -1111,14 +1114,15 @@ begin
                       (s4 = '&')
                     )
   {
-                    (s4 = 'i') or  // int / integer
+                    (s4 = 'i') or  // int / integer / iterable
                     (s4 = 'b') or  // bool / boolean / binary
                     (s4 = 'f') or  // float
                     (s4 = 'd') or  // double
                     (s4 = 'r') or  // real
-                    (s4 = 's') or  // string
+                    (s4 = 's') or  // string // self
                     (s4 = 'a') or  // array
                     (s4 = 'o') or  // object
+                    (s4 = 'c') or  // callable
                     (s4 = 'u')     // unset
   }
                   )
@@ -1174,15 +1178,16 @@ begin
                     (s4 = '&')
                   )
   {
-                  (s4 = 'i') or  // int / integer
-                  (s4 = 'b') or  // bool / boolean / binary
-                  (s4 = 'f') or  // float
-                  (s4 = 'd') or  // double
-                  (s4 = 'r') or  // real
-                  (s4 = 's') or  // string
-                  (s4 = 'a') or  // array
-                  (s4 = 'o') or  // object
-                  (s4 = 'u')     // unset
+                    (s4 = 'i') or  // int / integer / iterable
+                    (s4 = 'b') or  // bool / boolean / binary
+                    (s4 = 'f') or  // float
+                    (s4 = 'd') or  // double
+                    (s4 = 'r') or  // real
+                    (s4 = 's') or  // string // self
+                    (s4 = 'a') or  // array
+                    (s4 = 'o') or  // object
+                    (s4 = 'c') or  // callable
+                    (s4 = 'u')     // unset
   }
                 )
                 then begin
@@ -1463,7 +1468,7 @@ begin
             if
             (
               (fileExt = '.php') or
-              (fileExt = '.php6') or
+              (fileExt = '.php7') or
               (fileExt = '.php5') or
               (fileExt = '.php4')
             )
@@ -1508,7 +1513,7 @@ begin
               if
               (
                 (fileExt = '.php') or
-                (fileExt = '.php6') or
+                (fileExt = '.php7') or
                 (fileExt = '.php5') or
                 (fileExt = '.php4')
               )
